@@ -1,0 +1,16 @@
+public class AnnonymousInner {
+    public static void main(String[] args) {
+        A obj = new A() {
+            public void show() {
+                System.out.println("in Annonymous Inner class show");
+            }
+        };
+        obj.show();
+    }
+}
+
+class A {
+    public void show() {
+        System.out.println("in A show");
+    }
+}

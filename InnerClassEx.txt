@@ -1,0 +1,25 @@
+public class Inner {
+    public static void main(String[] args) {
+
+        A obj = new A();
+        obj.show();
+
+        // A.B obj1 = obj.new B();
+        // obj1.config();
+
+        A.B obj1 = new A.B(); // this is for static block
+        obj1.config();
+    }
+}
+
+class A {
+    public void show() {
+        System.out.println("in A show");
+    }
+
+    static class B {
+        public void config() {
+            System.out.println("in B config");
+        }
+    }
+}
