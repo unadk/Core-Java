@@ -1,0 +1,46 @@
+//single and multiple inheritance
+
+public class SingleInheritance {
+    public static void main(String[] args) {
+        VeryAdvCalc obj = new VeryAdvCalc();
+        int res = obj.add(5, 7);
+        int res1 = obj.sub(6, 3);
+        int res2 = obj.mul(6, 7);
+        int res3 = obj.div(8, 4);
+        double res4 = obj.mod(6, 4);
+
+        System.out.println(res);
+        System.out.println(res1);
+        System.out.println(res2);
+        System.out.println(res3);
+        System.out.println(res4);
+
+    }
+}
+
+class Calc {
+    public int add(int n1, int n2) {
+        return n1 + n2;
+    }
+
+    public int sub(int n1, int n2) {
+        return n1 - n2;
+    }
+}
+
+class AdvCalc extends Calc {
+    public int mul(int n1, int n2) {
+        return n1 * n2;
+    }
+
+    public int div(int n1, int n2) {
+        return n1 / n2;
+    }
+
+}
+
+class VeryAdvCalc extends AdvCalc {
+    public int mod(int n1, int n2) {
+        return n1 % n2;
+    }
+}

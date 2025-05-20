@@ -1,0 +1,30 @@
+public class FinalKeyword {
+    public static void main(String[] args) {
+        final int num = 8;
+        // num = 9; //it will give you to error bcz num verible is final so it trated as
+        // constant
+        System.out.println(num);
+
+        B obj = new B();
+        obj.show();
+    }
+}
+
+final class A {
+
+    public final void show() {
+        System.out.println("in A class show method");
+    }
+
+    public void config() {
+        System.out.println("in A class config method");
+    }
+
+}
+
+class B extends A { // it shows compile time error bcz we stop inheritance
+
+    public void show() { // in shows compile time error bcz we stop method overriding
+        System.out.println("in B class show method");
+    }
+}

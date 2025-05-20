@@ -1,0 +1,22 @@
+public class ThisKeyword {
+    public static void main(String[] args) {
+        Student s1 = new Student(18, "vishesh", 89);
+        s1.show();
+    }
+}
+
+class Student {
+    int age = 19;
+    String name = "yug";
+    int marks = 99;
+
+    public Student(int age, String name, int marks) {
+        this.age = age;
+        this.name = name;
+        this.marks = marks;
+    }
+
+    public void show() {
+        System.out.println(age + " : " + name + " : " + marks);
+    }
+}

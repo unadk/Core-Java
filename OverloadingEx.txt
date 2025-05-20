@@ -1,0 +1,18 @@
+public class Overloading {
+    public static void main(String[] args) {
+        A obj = new A();
+        int res = obj.add(5., 6);
+        System.out.println(res);
+
+    }
+}
+
+class A {
+    public int add(double n1, int n2) {
+        return (int) n1 + n2;
+    }
+
+    public int add(double n1, int n2, int n3) {
+        return (int) n1 + n2 + n3;
+    }
+}
