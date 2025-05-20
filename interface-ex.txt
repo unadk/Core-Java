@@ -1,0 +1,38 @@
+public class Interface {
+    public static void main(String[] args) {
+        B obj = new B();
+        obj.config();
+
+        int res = obj.add(4, 6);
+        System.out.println(res);
+    }
+}
+
+interface A {
+    void show();
+
+    void config();
+
+    int add(int n1, int n2);
+
+    // public void display()
+    // {
+    // System.out.println("in A class display method"); it gives you error
+    // }
+}
+
+class B implements A {
+    public void show() {
+        System.out.println("in B class show method");
+    }
+
+    @Override
+    public void config() {
+        System.out.println("in B class config method");
+    }
+
+    @Override
+    public int add(int n1, int n2) {
+        return n1 + n2;
+    }
+}
